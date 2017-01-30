@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Sam Rizer - Labs</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app="">
+            <div id="container">
+                <div ng-include src="'top.html'"></div>
+                <div id="content">
+
+                    <div class="myText">
+
+                        <h2>Lab 1 - Homepage</h2>
+                        
+                        <p>
+                            My experience with front-end frameworks and languages is fairly limited. I first took an HTML class in high school, 
+                            then never meaningfully used front-end technologies until a hackathon during Fall 2016 where I took data about 
+                            concerts from Seatgeek's API, then placed that information on a map with Google Maps. The API key is no longer valid, 
+                            but the page is still hosted on github <a href="https://sxmrxzxr.github.io/showfinder/" target="_blank">here</a>. However,
+                            the code is sloppily copy-pasted from StackOverflow and API docs, I don't know if I could confidently explain the code today.
+                        </p>
+                        
+                        <p>
+                            The advanced CSS techniques I used for this lab include the "border-radius" attribute, which allows for rounded edges in my 
+                            content div and avoids a blocky, unappealing style, as well as the "width" attribute applied to the banjo picture where I can
+                            resize the page and maintain a proper ration between the text and the image.
+                        </p>
+                        
+                        <p>
+                            In this lab, I learned about referencing code snippets with the Angular-like "ng" tags, which were very useful for the common
+                            elements of my web pages such as nav bars and footers. I also learned how powerful CSS is with respect to formatting a page,
+                            which until this class I just assumed made webpages slightly prettier, and the bulk of formatting and positioning on a web page
+                            was predominantly HTML.
+                        </p>
+                        
+                    </div>
+                </div>
+                <div ng-include src="'btm.html'"></div>
+            </div>
+        </div>
+    </body>
+</html>

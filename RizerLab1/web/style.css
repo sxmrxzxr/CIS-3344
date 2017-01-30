@@ -1,0 +1,93 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 26, 2017, 2:09:21 PM
+    Author     : Sam Rizer
+*/
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+
+body {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+h1 {
+    margin: 8px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+h2 {
+    margin: 8px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+#titleNav {
+    height: 128px;
+    min-width: 300px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    background-color: white;
+    top: 0;
+    width: 100%;
+}
+
+.nav{
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+.nav li{
+    display:inline;
+}
+.nav a{
+    display:inline-block;
+    padding:10px;
+    text-decoration:none;
+    color: grey;
+}
+
+.nav a:hover {
+    color:black;
+}
+
+.nav a:visited {
+    text-decoration: none;
+}
+
+#content {
+    margin: 128px 15px; /* 1st is top/bottom, 2nd is left/right */
+    padding:20px 20px;	 
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: grey;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.myPic {
+    width: 25%;
+    float: left;
+    margin-right: 10px;
+}
+
+#footer {
+    clear:both;
+    text-align:center;
+    padding:0;
+    position: fixed;
+    min-width: 300px;
+    width: 100%;
+}
