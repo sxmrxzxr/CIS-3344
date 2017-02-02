@@ -1,0 +1,130 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 30, 2017, 12:08:59 PM
+    Author     : tue95606
+*/
+
+body { 
+    margin: 0; padding: 0; /* avoid white line just inside browser window */
+
+    /* set up default text properties - most commonly used */
+    font-family: Tahoma, 'Arial Black', san-serif;
+    font-size: 16px;
+    background-color: #FFFFCC;
+    line-height: 1.5em;
+}
+h1 { /* "hero style" page titles */
+    font-size: 3.0em; 
+}
+#nav {  /* without this there is space above the nav bar */
+    margin-top: 0px; 
+}
+
+.sng-page {
+    min-height: 500px; /* fallout for older browsers */
+    min-height: 100vh;
+    padding: 0px 1.0em;   /* top/bottom   then   left/right */
+    padding-bottom: 56px; /* height of footer, make space for fixed footer */
+    border-top: 1px solid blue; /* page divider */
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    background-color: black;
+    color:#CCCCCC;
+    letter-spacing: 0.1ex;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 12px;
+}
+#footer a {
+    text-decoration: none;
+    color:#CCCCCC;
+}
+#footer a:hover {
+    color: white;
+}
+
+/* colors to differentiate the pages */
+#page1 {
+    background-color: lightcyan;
+}
+#page2 {
+    background-color: lightyellow;
+}
+#page3 {
+    background-color: violet;
+}
+
+#nav {
+    position:fixed;
+    background-color:white;
+    top:0px;
+    right:0px;
+    padding: 10px;
+    font-size:18px;
+    font-weight:bold;
+    z-index:2;
+    margin-right:0px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 2px 2px 2px gray;
+}
+#nav li {
+    display:inline;
+    margin-left:5px; /* spacing between links of nav bar */
+}
+
+.container {
+    width: 100%;
+    box-sizing: border-box; /* gets rid of horizontal scroll bar, counts padding and border in box size */
+    /* border:thin solid blue; */
+}
+
+.pageTitle {
+    padding: 10px 15px; /* 1st is top/bottom, 2nd is left/right */
+    background-color: gold;
+    color: black;
+    margin-bottom: -3px; /* cover up white space between title and content */
+    font-size: 1.3em;
+    line-height: 2.5em;
+}
+
+.one-to-three {
+    /* border:thin solid red; */
+    width: 100%;
+    padding: 15px;
+    background-color: #334411;
+    color: white;
+    margin: 5px 0%;  /* 1st is top/bottom, 2nd is left/right */
+    box-sizing: border-box; /* gets rid of horizontal scroll bar, counts padding and border in box size */
+}
+
+@media screen and (min-width: 600px) {
+
+    .container {
+        background-color:  #334411;
+        padding: 0px 15px;
+    }
+
+    .one-to-three {
+        background-color: rgba(0,0,0,0);
+        padding: 5px 15px; /* 1st is top/bottom, 2nd is left/right */
+        width: 32.3%;
+        margin: 0px 0.5%;  /* make the width of the 3 elements plus margins total 100% */
+        float: left;
+    }
+
+    .clear {
+        clear:both;
+    }
+}
+
