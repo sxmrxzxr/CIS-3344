@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!-- Single Page Design Template -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- It's good practice for modern web design to include these meta tags  -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Single Page</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body>
+
+        <ul id="nav">
+            <li><a href="#page1">Home</a></li>
+            <li><a href="#page2">Cities</a></li>
+            <li><a href="#page3">Contact</a></li>
+        </ul>
+
+        <!-- Page 1 -->
+        <div id="page1" class="sng-page">
+
+            <h2>Home</h2>
+            <p>Welcome to the home page of this Lab Activity.</p>
+        </div>
+
+        <!-- Page 2 -->
+        <div id="page2" class="sng-page">
+            <div class="pageTitle">
+                <h1>Cities <span style="font-size:0.6em;"> -&nbsp;Resize&nbsp;Me&nbsp;!</span></h1> 
+            </div> <!-- end pageTitle -->
+
+            <div class="container">
+                <div class="one-to-three">
+                    <h2>London</h2>
+                    <p>London is the capital city of England.</p>
+                    <p>It is the most populous city in the United Kingdom,
+                        with a metropolitan area of over 13 million inhabitants.</p>
+                </div>
+
+                <div class="one-to-three">
+                    <h2>Paris</h2>
+                    <p>Paris is the capital of France.</p> 
+                    <p>The Paris area is one of the largest population centers in Europe,
+                        with more than 12 million inhabitants.</p>
+                </div>
+
+                <div class="one-to-three">
+                    <h2>Tokyo</h2>
+                    <p>Tokyo is the capital of Japan.</p>
+                    <p>It is the center of the Greater Tokyo Area,
+                        and the most populous metropolitan area in the world.</p>
+                </div>
+
+                <div class="clear"></div>
+
+            </div> <!-- end container -->
+        </div>
+
+        <!-- Page 3 -->
+        <div id="page3" class="sng-page">
+            <form name="myForm" method="post" action="http://www.temple.edu/cgi-bin/mail?tue95606@temple.edu">
+                <h3>Contact </h3>
+                <h4>Submit button sends you email (if you put your email address in the form's action attribute)</h4>
+                What is Your Name?   <input type="text" name="userName" placeholder="plain text input"/>  <br/> 
+                What is your Gender? <input type="text" name="userGender" placeholder="plain text input"/>  <br/> 
+                Are you a Temple University Student? <input type="checkbox" name="isCisMajor"  />  <br/> 
+                What Class are you in?
+                <select name="collegeClass" >
+                    <option value="Fr" >Freshman</option>
+                    <option value="So">Sophomore</option>
+                    <option value="Jr">Junior</option>
+                    <option value="Sr" selected="selected">Senior</option>
+                    <option value="NaS">Not a Student</option>
+                </select>     <br/> <br/>
+                Comments or Suggestions? <br/>
+                <textarea name="inputcomments" cols="45" rows="5" >Type your comments here</textarea> <br/> <br/>
+                <input type="submit" value="Click Here" />
+            </form>
+        </div>
+
+        <footer id="footer">
+            &copy;  <a href="http://temple.edu">Temple</a> 
+            (external link)
+        </footer>
+
+        <!-- Jquery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+
+            // Wait until all elements exist on the page before trying to reference anything ...
+            $(document).ready(function () {
+
+                // Selector: All <a> elements with a href attribute that starts with "#":
+                //    Learned this from   http://www.w3schools.com/jquery/jquery_ref_selectors.asp
+                // Event: When the selected elements are clicked ...
+                // Action: Run the following (unnamed) function
+                $('a[href^="#"]').click(function () {
+
+                    // "this" means the element involved in the event, so, the link that was clicked.
+                    console.log("this");
+                    console.log(this); // if you console.log an object, you'll see nice tree view
+                    // of the object's properties in the console (F12 from Chrome)
+                    console.log("-");
+
+                    // ".hash" refers to the href attribute of the <a> tag. So, if <a href="#page1">
+                    // was clicked, then "this.hash" has this value: "#page1"
+                    console.log("this.hash");
+                    console.log(this.hash);
+                    console.log("-");
+
+                    // $ is a jQuery function which returns a jQuery object that references the
+                    // specified HTML element. For example, $("#content") returns a jQuery
+                    // object that references the HTML element with id="content", but also has
+                    // loads of contextual information about that element (e.g., parent, siblings, 
+                    // and many other properties.
+
+                    // So, target will contain a jQuery object (with loads of info) about the element that 
+                    // is "being linked to" (the element referenced by the href attribute).
+                    var target = $(this.hash);
+                    console.log("$(this.hash)");
+                    console.log(target);
+                    console.log("-");
+
+                    // if (whatever) returns "not false" if 'whatever' exists.
+                    if (target.length) {
+
+                        // animate is a jQuery function (what_to_do, how_fast_in_millisecs). 
+                        // "what_to_do" is an object with any number of CSS property/value pairs:
+                        /*
+                         * $("button").click(function(){
+                         $("div").animate({
+                         left: '250px',
+                         opacity: '0.5',
+                         height: '150px',
+                         },500);
+                         }); 
+                         */
+                        // 
+                        // scrollTop is a javaScript property of any DOM element. 
+                        // It measures the number of pixels from the DOM element to the top of 
+                        // of the DOM element's scrollable parent element.
+                        //           see http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_element_scrollleft
+                        // 
+                        // .offset() is a function (of any jQuery object) that returns an object with 
+                        // top and left properties (top/left relative to the document).
+
+                        $('html, body').animate({
+                            // set the scrollTop property (of the browser)
+                            // to be the top attribute of the element being linked to
+                            scrollTop: target.offset().top
+                        }, 900);  // but do it a bit slow (900 millisecs)
+                    }
+
+                });
+
+            });
+        </script>
+    </body>
+</html>
