@@ -18,74 +18,67 @@ and open the template in the editor.
     </head>
     <body>
 
-        <ul id="nav">
-            <li><a href="#page1">Home</a></li>
-            <li><a href="#page2">Cities</a></li>
-            <li><a href="#page3">Contact</a></li>
-        </ul>
+        <div id="titleNav">
+            <div id="pageTitle">
+                <h1>Sam Rizer</h1>
+            </div>
+            <ul class="nav">
+                <li><a class="nav" href="#home">Home</a> </li>
+                <li><a class="nav" href="#about">About</a></li>
+                <li><a class="nav" href="#contact">Contact</a></li>
+            </ul>
+        </div>
 
         <!-- Page 1 -->
-        <div id="page1" class="sng-page">
+        <div id="content">
+            <div id="home" class="sng-page">
 
-            <h2>Home</h2>
-            <p>Welcome to the home page of this Lab Assignment.</p>
-        </div>
+                <h2>Home</h2>
+                <p>Welcome to the home page of this Lab Assignment. Other pages include a brief description of my instruments, as well as a form to submit questions.</p>
+            </div>
 
-        <!-- Page 2 -->
-        <div id="page2" class="sng-page">
-            <div class="pageTitle">
-                <h1>Cities <span style="font-size:0.6em;"> -&nbsp;Resize&nbsp;Me&nbsp;!</span></h1> 
-            </div> <!-- end pageTitle -->
+            <!-- Page 2 -->
+            <div id="about" class="sng-page">
+                <div class="pageTitle">
+                    <h2>Instruments</h2> 
+                </div> <!-- end pageTitle -->
 
-            <div class="container">
-                <div class="one-to-three">
-                    <h2>London</h2>
-                    <p>London is the capital city of England.</p>
-                    <p>It is the most populous city in the United Kingdom,
-                        with a metropolitan area of over 13 million inhabitants.</p>
-                </div>
+                <div class="container">
+                    <div class="one-to-three">
+                        <h3>Squier Telecaster</h3>
+                        <img src="img/tele.png"/>
+                        <p>I bought this Telecaster back in 2008, and while it's electronics have become somewhat unreliable, it still plays well.</p>
+                    </div>
+                    
+                    <div class="one-to-three" style="text-align: center">
+                        <h3>Squier Jazz Bass</h3>
+                        <img src="img/jbass.png"/>
+                        <p>I believe I got this bass in 2012, I don't exactly remember. Despite it's beginner designation, it is still a good bass.</p>
+                    </div>
 
-                <div class="one-to-three">
-                    <h2>Paris</h2>
-                    <p>Paris is the capital of France.</p> 
-                    <p>The Paris area is one of the largest population centers in Europe,
-                        with more than 12 million inhabitants.</p>
-                </div>
+                    <div class="one-to-three" style="text-align: right">
+                        <h3>Epiphone Open-Back Banjo</h3>
+                        <img src="img/IMG_2769.jpg">
+                        <p>I have owned this banjo since 2014, and it is all-around an excellent instrument.</p> 
+                    </div>
 
-                <div class="one-to-three">
-                    <h2>Tokyo</h2>
-                    <p>Tokyo is the capital of Japan.</p>
-                    <p>It is the center of the Greater Tokyo Area,
-                        and the most populous metropolitan area in the world.</p>
-                </div>
+                    <div class="clear"></div>
 
-                <div class="clear"></div>
+                </div> <!-- end container -->
+            </div>
 
-            </div> <!-- end container -->
-        </div>
-
-        <!-- Page 3 -->
-        <div id="page3" class="sng-page">
-            <form name="myForm" method="post" action="http://www.temple.edu/cgi-bin/mail?tue95606@temple.edu">
-                <h3>Contact </h3>
-                <h4>Submit button sends you email (if you put your email address in the form's action attribute)</h4>
-                What is Your Name?   <input type="text" name="userName" placeholder="plain text input"/>  <br/> 
-                What is your Gender? <input type="text" name="userGender" placeholder="plain text input"/>  <br/> 
-                Are you a Temple University Student? <input type="checkbox" name="isCisMajor"  />  <br/> 
-                What Class are you in?
-                <select name="collegeClass" >
-                    <option value="Fr" >Freshman</option>
-                    <option value="So">Sophomore</option>
-                    <option value="Jr">Junior</option>
-                    <option value="Sr" selected="selected">Senior</option>
-                    <option value="NaS">Not a Student</option>
-                </select>     <br/> <br/>
-                Comments or Suggestions? <br/>
-                <textarea name="inputcomments" cols="45" rows="5" >Type your comments here</textarea> <br/> <br/>
-                <input type="submit" value="Click Here" />
-            </form>
-        </div>
-
+            <!-- Page 3 -->
+            <div id="contact" class="sng-page">
+                <form name="myForm" method="post" action="http://www.temple.edu/cgi-bin/mail?tue95606@temple.edu">
+                    <h3>Contact </h3>
+                    <h4>Submit button sends you email (if you put your email address in the form's action attribute)</h4>
+                    Name: <input type="text" name="userName" placeholder="plain text input"/>  <br/> <br/>
+                    Comments or Suggestions? <br/>
+                    <textarea name="inputcomments" cols="45" rows="5" >Type your comments here</textarea> <br/> <br/>
+                    <input type="submit" value="Click Here" />
+                </form>
+            </div>
+        </div>>
         <footer id="footer">
             &copy;  <a href="http://temple.edu">Temple</a> 
             (external link)

@@ -12,10 +12,12 @@ body {
     margin: 0; padding: 0; /* avoid white line just inside browser window */
 
     /* set up default text properties - most commonly used */
-    font-family: Tahoma, 'Arial Black', san-serif;
+    font-family: Courier, 'Courier New', san-serif;
     font-size: 16px;
-    background-color: #FFFFCC;
+    background-color: whitesmoke;
     line-height: 1.5em;
+    position: center;
+    
 }
 h1 { /* "hero style" page titles */
     font-size: 3.0em; 
@@ -27,9 +29,8 @@ h1 { /* "hero style" page titles */
 .sng-page {
     min-height: 500px; /* fallout for older browsers */
     min-height: 100vh;
-    padding: 0px 1.0em;   /* top/bottom   then   left/right */
+    padding: 128px 1.0em;   /* top/bottom   then   left/right */
     padding-bottom: 56px; /* height of footer, make space for fixed footer */
-    border-top: 1px solid blue; /* page divider */
 }
 
 #footer {
@@ -54,73 +55,92 @@ h1 { /* "hero style" page titles */
     color: white;
 }
 
-/* colors to differentiate the pages */
-#page1 {
-    background-color: lightcyan;
-}
-#page2 {
-    background-color: lightyellow;
-}
-#page3 {
-    background-color: violet;
+#titleNav {
+    height: 128px;
+    min-width: 300px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    background-color: whitesmoke;
+    top: 0;
+    width: 100%;
+    text-align: center;
 }
 
-#nav {
-    position:fixed;
-    background-color:white;
-    top:0px;
-    right:0px;
-    padding: 10px;
-    font-size:18px;
-    font-weight:bold;
-    z-index:2;
-    margin-right:0px;
-    border-bottom-left-radius: 10px;
-    box-shadow: 2px 2px 2px gray;
+.nav{
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
 }
-#nav li {
+.nav li{
     display:inline;
-    margin-left:5px; /* spacing between links of nav bar */
+}
+.nav a{
+    display:inline-block;
+    padding:10px;
+    text-decoration:none;
+    color: grey;
+}
+
+.nav a:hover {
+    color:black;
+}
+
+.nav a:visited {
+    text-decoration: none;
 }
 
 .container {
-    width: 100%;
-    box-sizing: border-box; /* gets rid of horizontal scroll bar, counts padding and border in box size */
-    /* border:thin solid blue; */
+    box-sizing: border-box;
 }
 
 .pageTitle {
     padding: 10px 15px; /* 1st is top/bottom, 2nd is left/right */
-    background-color: gold;
+    background-color: whitesmoke;
     color: black;
     margin-bottom: -3px; /* cover up white space between title and content */
-    font-size: 1.3em;
     line-height: 2.5em;
+    text-align: center;
 }
 
 .one-to-three {
     /* border:thin solid red; */
     width: 100%;
     padding: 15px;
-    background-color: #334411;
-    color: white;
+    background-color: whitesmoke;
+    color: black;
     margin: 5px 0%;  /* 1st is top/bottom, 2nd is left/right */
     box-sizing: border-box; /* gets rid of horizontal scroll bar, counts padding and border in box size */
+}
+
+#content {
+    width: 75%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+img.resize {
+    max-width: 25%;
+    max-height: 25%;
 }
 
 @media screen and (min-width: 600px) {
 
     .container {
-        background-color:  #334411;
-        padding: 0px 15px;
+        background-color:  whitesmoke;
+        padding: 0px 0px;
     }
 
     .one-to-three {
         background-color: rgba(0,0,0,0);
-        padding: 5px 15px; /* 1st is top/bottom, 2nd is left/right */
-        width: 32.3%;
-        margin: 0px 0.5%;  /* make the width of the 3 elements plus margins total 100% */
+        padding: 0px 0px; /* 1st is top/bottom, 2nd is left/right */
+        width: 33%;
+        margin: 0px;  /* make the width of the 3 elements plus margins total 100% */
         float: left;
+        box-sizing: border-box;
     }
 
     .clear {
