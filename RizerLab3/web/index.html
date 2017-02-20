@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <style>
+            div {
+                height: 100px;
+                width: 100px;
+                border-radius: 10px;
+                font: white;
+            }
+            
+            #forwardInc {
+                float: left;
+                background-color: blue;
+            }
+            
+            #backwardInc {
+                float: right;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="myFramework.js"></script>
+        
+        <div style="float:left">
+            <div id="forwardInc"></div>
+            <input type="button" value="Switch Case" onclick="myForwardInc.capitalize()">
+        </div>
+        
+        <div style="float:right">
+            <div id="backwardInc"></div>
+            <input type="button" value="Switch Case" onclick="myBackwardInc.capitalize()">
+        </div>
+        
+        <p>Click the boxes to increment through the alphabet. Click the button beneath each box to toggle the capitalization.</p>
+        
+        <script>
+            my$ = function(element) {
+                return document.getElementById(element);
+            };
+            
+            var myObj = new MakeAlphaFramework();
+            
+            var myForwardInc = new myObj.MakeAlpha({
+               id: "forwardInc",
+               count: 0,
+               direction: true,
+               clickable: true
+            });
+            
+            var myBackwardInc = new myObj.MakeAlpha({
+               id: "backwardInc",
+               count: 24,
+               direction: false,
+               clickable: true
+            });
+        </script>
+    </body>
+</html>
