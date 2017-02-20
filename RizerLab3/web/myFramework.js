@@ -62,6 +62,11 @@ function MakeAlphaFramework() {
             display();
         };
         
+        this.switchDirection = function() {
+            direction = !direction;
+            display();
+        }
+        
         eleRef.onclick = this.iterate;
     };
     
